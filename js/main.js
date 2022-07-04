@@ -1,10 +1,12 @@
-const età = parseInt (prompt('Inserisci la tua età'));
-const kilometri = parseInt (prompt('Inserisci numero kilometri da percorrere'));
-const tariffa = 0.21 
-const prezzo = tariffa * kilometri
+let età = parseInt (prompt('Inserisci la tua età'));
+let kilometri = parseInt (prompt('Inserisci numero kilometri da percorrere'));
+let tariffa = 0.21;
+let prezzo = tariffa * kilometri;
 if (età < 18) {
-    prezzo - 20%
-} else if {
-    prezzo -40%
+    let discount = prezzo * 20 / 100;
+    prezzo = prezzo - discount;
+} else if (età > 64) {
+    let discount = prezzo * 40 / 100;
+    prezzo = prezzo - discount;
 }
-alert ('Il prezzo è di ' + prezzo + ' Euro')
+alert ('Il prezzo è di ' + prezzo.toFixed(2) + ' Euro')
